@@ -369,8 +369,7 @@ export default function RecruitmentPage() {
             </div>
 
             <p className="max-w-md text-sm leading-7 text-zinc-500">
-              We are forming our initial competitive roster. All positions
-              are currently open for consideration.
+              KhoR VALORANT is currently forming its first roster. Five starting positions and one substitute position are open for applications.
             </p>
           </div>
 
