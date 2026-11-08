@@ -2,6 +2,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -77,14 +78,15 @@ export default function NewsPage() {
       {/* Navigation */}
       <header className="fixed left-0 top-0 z-50 w-full border-b border-white/[0.08] bg-[#080808]/95 backdrop-blur-xl">
         <div className="mx-auto flex h-[76px] max-w-[1440px] items-center justify-between px-6 md:px-12">
-          <Link href="/" className="flex items-center gap-3">
-            <span className="text-2xl font-black tracking-[-0.1em]">
-              K<span className="text-purple-500">.</span>
-            </span>
-
-            <span className="text-sm font-bold tracking-[0.22em]">
-              KhoR
-            </span>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/branding/khor-logo.png"
+              alt="KhoR Esports"
+              width={160}
+              height={48}
+              priority
+              className="h-10 w-auto object-contain"
+            />
           </Link>
 
           <nav className="hidden items-center gap-6 text-[10px] font-semibold tracking-[0.16em] text-zinc-400 xl:flex">
@@ -428,14 +430,14 @@ export default function NewsPage() {
       {/* Footer */}
       <footer className="border-t border-white/10 px-6 md:px-12">
         <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-8 py-12 lg:flex-row lg:items-center">
-          <Link href="/" className="flex items-center gap-3">
-            <span className="text-2xl font-black tracking-[-0.1em]">
-              K<span className="text-purple-500">.</span>
-            </span>
-
-            <span className="text-xs font-bold tracking-[0.22em]">
-              KhoR
-            </span>
+          <Link href="/" className="inline-flex items-center">
+            <Image
+              src="/branding/khor-logo.png"
+              alt="KhoR Esports"
+              width={160}
+              height={48}
+              className="h-10 w-auto object-contain"
+            />
           </Link>
 
           <p className="text-[9px] tracking-[0.2em] text-zinc-600">

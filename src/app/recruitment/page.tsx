@@ -1,5 +1,7 @@
+
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import {
@@ -98,7 +100,7 @@ const PROCESS = [
     number: "02",
     title: "APPLICATION REVIEW",
     description:
-      "KhoR leadership reviews your rank, experience, role preferences, and overall fit.",
+      "The KhoR founder reviews your rank, experience, role preferences, and overall fit.",
   },
   {
     number: "03",
@@ -139,21 +141,17 @@ export default function RecruitmentPage() {
         <div className="mx-auto flex h-[78px] max-w-[1440px] items-center justify-between px-6 lg:px-12">
           <Link
             href="/"
-            className="group flex items-center gap-3"
+            className="group flex items-center"
             onClick={() => setMenuOpen(false)}
           >
-            <div className="flex h-10 w-10 items-center justify-center border border-purple-400/40 bg-purple-500/10">
-              <span className="text-xl font-black tracking-tighter text-white">
-                K
-              </span>
-            </div>
-
-            <div>
-              <p className="text-xl font-black tracking-[0.18em]">KHOR</p>
-              <p className="text-[9px] font-semibold tracking-[0.3em] text-zinc-500">
-                ESPORTS
-              </p>
-            </div>
+            <Image
+              src="/branding/khor-logo.png"
+              alt="KhoR Esports"
+              width={160}
+              height={48}
+              priority
+              className="h-10 w-auto object-contain"
+            />
           </Link>
 
           <nav className="hidden items-center gap-7 lg:flex">
@@ -188,6 +186,7 @@ export default function RecruitmentPage() {
             onClick={() => setMenuOpen(!menuOpen)}
             className="flex h-10 w-10 items-center justify-center border border-white/10 text-white lg:hidden"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={menuOpen}
           >
             {menuOpen ? <X size={21} /> : <Menu size={21} />}
           </button>
@@ -369,7 +368,8 @@ export default function RecruitmentPage() {
             </div>
 
             <p className="max-w-md text-sm leading-7 text-zinc-500">
-              KhoR VALORANT is currently forming its first roster. Five starting positions and one substitute position are open for applications.
+              KhoR VALORANT is currently forming its first roster. Five starting
+              positions and one substitute position are open for applications.
             </p>
           </div>
 
@@ -602,7 +602,7 @@ export default function RecruitmentPage() {
           </div>
 
           <p className="mt-7 text-[10px] tracking-wide text-zinc-600">
-            APPLICATIONS ARE REVIEWED BY KHOR MANAGEMENT.
+            APPLICATIONS ARE REVIEWED BY THE KHOR FOUNDER.
           </p>
         </div>
       </section>
@@ -612,18 +612,14 @@ export default function RecruitmentPage() {
         <div className="mx-auto max-w-[1440px] px-6 py-16 lg:px-12">
           <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
             <div>
-              <Link href="/" className="inline-flex items-center gap-3">
-                <div className="flex h-11 w-11 items-center justify-center border border-purple-400/40 bg-purple-500/10">
-                  <span className="text-xl font-black">K</span>
-                </div>
-                <div>
-                  <p className="text-xl font-black tracking-[0.18em]">
-                    KHOR
-                  </p>
-                  <p className="text-[9px] font-bold tracking-[0.3em] text-zinc-600">
-                    ESPORTS
-                  </p>
-                </div>
+              <Link href="/" className="inline-flex items-center">
+                <Image
+                  src="/branding/khor-logo.png"
+                  alt="KhoR Esports"
+                  width={160}
+                  height={48}
+                  className="h-11 w-auto object-contain"
+                />
               </Link>
 
               <p className="mt-6 max-w-sm text-xs leading-7 text-zinc-500">

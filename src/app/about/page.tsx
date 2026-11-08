@@ -1,4 +1,5 @@
 
+import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -78,16 +79,18 @@ const PRIORITIES = [
 export default function AboutPage() {
   return (
     <main className="min-h-screen overflow-hidden bg-[#080808] text-white">
-      {/* Navigation */}
+      {/* NAVIGATION */}
       <header className="sticky top-0 z-50 border-b border-white/[0.08] bg-[#080808]/95 backdrop-blur-xl">
         <div className="mx-auto flex h-[76px] max-w-[1440px] items-center justify-between px-6 md:px-12">
-          <Link href="/" className="flex items-center gap-3">
-            <span className="text-2xl font-black tracking-[-0.1em]">
-              K<span className="text-purple-500">.</span>
-            </span>
-            <span className="text-sm font-bold tracking-[0.22em]">
-              KhoR
-            </span>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/branding/khor-logo.png"
+              alt="KhoR Esports"
+              width={160}
+              height={48}
+              priority
+              className="h-10 w-auto object-contain"
+            />
           </Link>
 
           <nav className="hidden items-center gap-6 text-[10px] font-semibold tracking-[0.16em] text-zinc-400 xl:flex">
@@ -118,7 +121,7 @@ export default function AboutPage() {
         </div>
       </header>
 
-      {/* Hero */}
+      {/* HERO */}
       <section className="relative flex min-h-[650px] items-center overflow-hidden border-b border-white/[0.08]">
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute -right-40 top-10 h-[600px] w-[600px] rounded-full bg-purple-700/[0.16] blur-[150px]" />
@@ -168,12 +171,14 @@ export default function AboutPage() {
                 ESTABLISHED
               </p>
             </div>
+
             <div>
               <p className="text-2xl font-black">01</p>
               <p className="mt-2 text-[9px] tracking-[0.2em] text-zinc-500">
                 COMPETITIVE TITLE
               </p>
             </div>
+
             <div>
               <p className="text-2xl font-black">∞</p>
               <p className="mt-2 text-[9px] tracking-[0.2em] text-zinc-500">
@@ -184,7 +189,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Our Story */}
+      {/* OUR STORY */}
       <section
         id="story"
         className="mx-auto grid max-w-[1440px] gap-12 px-6 py-28 md:px-12 lg:grid-cols-2 lg:items-center"
@@ -225,7 +230,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Mission and Vision */}
+      {/* MISSION AND VISION */}
       <section className="border-y border-white/[0.08] bg-[#0d0d0d]">
         <div className="mx-auto grid max-w-[1440px] gap-5 px-6 py-28 md:px-12 lg:grid-cols-2">
           <article className="relative overflow-hidden border border-purple-500/20 bg-[#121019] p-9 md:p-12">
@@ -278,7 +283,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Values */}
+      {/* VALUES */}
       <section className="mx-auto max-w-[1440px] px-6 py-28 md:px-12">
         <div className="mb-14 max-w-2xl">
           <p className="mb-5 text-[10px] font-bold tracking-[0.3em] text-purple-400">
@@ -310,6 +315,7 @@ export default function AboutPage() {
                   <span className="text-[10px] font-bold tracking-widest text-zinc-600">
                     {value.number}
                   </span>
+
                   <Icon
                     size={24}
                     className="text-purple-400"
@@ -330,7 +336,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Priorities */}
+      {/* PRIORITIES */}
       <section className="border-y border-white/[0.08] bg-[#0d0d0d]">
         <div className="mx-auto max-w-[1440px] px-6 py-28 md:px-12">
           <div className="mb-14">
@@ -373,7 +379,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Call to Action */}
+      {/* CALL TO ACTION */}
       <section className="relative overflow-hidden px-6 py-32 md:px-12">
         <div className="pointer-events-none absolute left-1/2 top-1/2 h-[450px] w-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-purple-700/[0.13] blur-[130px]" />
 
@@ -415,17 +421,17 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Footer */}
+      {/* FOOTER */}
       <footer className="border-t border-white/10 px-6 md:px-12">
         <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-8 py-12 lg:flex-row lg:items-center">
-          <Link href="/" className="flex items-center gap-3">
-            <span className="text-2xl font-black tracking-[-0.1em]">
-              K<span className="text-purple-500">.</span>
-            </span>
-
-            <span className="text-xs font-bold tracking-[0.22em]">
-              KhoR
-            </span>
+          <Link href="/" className="inline-flex items-center">
+            <Image
+              src="/branding/khor-logo.png"
+              alt="KhoR Esports"
+              width={160}
+              height={48}
+              className="h-10 w-auto object-contain"
+            />
           </Link>
 
           <p className="text-[9px] tracking-[0.2em] text-zinc-600">

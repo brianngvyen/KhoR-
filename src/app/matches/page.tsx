@@ -1,6 +1,7 @@
 
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import {
@@ -49,20 +50,16 @@ export default function MatchesPage() {
           <Link
             href="/"
             onClick={() => setMobileMenuOpen(false)}
-            className="group flex items-center gap-3"
+            className="group flex items-center"
           >
-            <div className="flex h-10 w-10 items-center justify-center border border-purple-400/50 bg-purple-500/10 transition group-hover:bg-purple-500/20">
-              <span className="text-xl font-black tracking-tighter">K</span>
-            </div>
-
-            <div>
-              <p className="text-xl font-black tracking-[0.2em]">
-                KHOR<span className="text-purple-400">.</span>
-              </p>
-              <p className="text-[8px] font-semibold tracking-[0.3em] text-zinc-500">
-                ESPORTS ORGANIZATION
-              </p>
-            </div>
+            <Image
+              src="/branding/khor-logo.png"
+              alt="KhoR Esports"
+              width={160}
+              height={48}
+              priority
+              className="h-10 w-auto object-contain"
+            />
           </Link>
 
           <nav className="hidden items-center gap-6 xl:flex">
@@ -573,19 +570,14 @@ export default function MatchesPage() {
       <footer className="border-t border-white/[0.08] bg-[#070709] px-6 pb-8 pt-14 md:px-12">
         <div className="mx-auto grid max-w-[1600px] gap-12 border-b border-white/[0.08] pb-12 md:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-2">
-            <Link href="/" className="inline-flex items-center gap-3">
-              <div className="flex h-11 w-11 items-center justify-center border border-purple-400/40 bg-purple-500/10">
-                <span className="text-xl font-black">K</span>
-              </div>
-
-              <div>
-                <p className="text-2xl font-black tracking-[0.2em]">
-                  KHOR<span className="text-purple-400">.</span>
-                </p>
-                <p className="text-[8px] font-bold tracking-[0.3em] text-zinc-500">
-                  ESPORTS ORGANIZATION
-                </p>
-              </div>
+            <Link href="/" className="inline-flex items-center">
+              <Image
+                src="/branding/khor-logo.png"
+                alt="KhoR Esports"
+                width={160}
+                height={48}
+                className="h-11 w-auto object-contain"
+              />
             </Link>
 
             <p className="mt-6 max-w-sm text-sm leading-7 text-zinc-500">
